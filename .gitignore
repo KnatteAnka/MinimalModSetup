@@ -51,6 +51,7 @@ crashlytics-build.properties
 [Pp]ackages/[Tt]imberborn/*
 [Aa]ssets/[Tt]imberborn/*
 [Aa]ssets/[Tt]imberborn
+[Aa]ssets/[Tt]hunderKitSettings
 ThunderKit/*
 UserSettings/*
 Assets/ThunderKitSettings/ThunderKitSettings.asset
