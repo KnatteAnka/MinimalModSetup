@@ -1,0 +1,6 @@
+ID,Text,Comment
+Knatte.FrogStatue.DisplayName,Frog Statue,-
+Knatte.FrogStatue.Description,Time to Pray for water.,-
+Knatte.FrogStatue.FlavorDescription,"""May it rain."" —Some beaver",Fixed to match official styling
+Knatte.FrogStatue.DisplaynameLocKey,Frog Statue,-
+

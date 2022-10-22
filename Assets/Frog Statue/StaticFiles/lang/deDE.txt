@@ -1,0 +1,6 @@
+ID,Text,Comment
+Knatte.FrogStatue.DisplayName,"Frosch-Statue",-
+Knatte.FrogStatue.Description,Zeit für Wasser zu beten.,-
+Knatte.FrogStatue.FlavorDescription,\u201EMöge es regnen.\u201C \u2013 Manche Biber
+Knatte.FrogStatue.DisplaynameLocKey,"Frosch-Statue",-
+

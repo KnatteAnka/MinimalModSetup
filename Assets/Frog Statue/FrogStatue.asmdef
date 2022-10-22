@@ -1,0 +1,19 @@
+{
+    "name": "FrogStatue",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "BepInEx.dll",
+        "Bindito.Core.dll",
+        "TimberAPI.dll",
+        "0Harmony.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

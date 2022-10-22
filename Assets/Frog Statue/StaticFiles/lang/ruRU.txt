@@ -1,0 +1,6 @@
+ID,Text,Comment
+Knatte.FrogStatue.DisplayName,"Лягушачья статуя","«» –"
+Knatte.FrogStatue.Description,"Время произнести молитву о полноводье.",-
+Knatte.FrogStatue.FlavorDescription,"«Да прольётся дождь! Да наполнятся реки!» – высокодуховный бобёр",-
+Knatte.FrogStatue.DisplaynameLocKey,"Лягушачья статуя",-
+

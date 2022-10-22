@@ -1,0 +1,6 @@
+ID,Text,Comment
+Knatte.FrogStatue.DisplayName,カエル像,-
+Knatte.FrogStatue.Description,雨乞いの時。,-
+Knatte.FrogStatue.FlavorDescription,雨雨ふれふれ　川の中　泳いで　ずぶ濡れ　うれしいな, 日本の童謡「あめふり」をベースにした替え歌。ビーバーが川の中を泳いで濡れた毛皮バフを貰える事を示唆している。
+Knatte.FrogStatue.DisplaynameLocKey,カエル像,-
+
