@@ -48,7 +48,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 #Timberborn Files
-
+[Pp]ackages/[Tt]imberborn/*
 [Aa]ssets/[Tt]imberborn/*
 [Aa]ssets/[Tt]imberborn
 ThunderKit/*
