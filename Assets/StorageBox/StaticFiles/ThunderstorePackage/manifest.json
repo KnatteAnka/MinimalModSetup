@@ -1,0 +1,10 @@
+{
+  "name": "Storagebox",
+  "version_number": "0.0.1",
+  "website_url": "https://github.com/KnatteAnka/MinimalModSetup",
+  "description": "Adds a Storagebox",
+  "dependencies": [
+    "BepInEx-BepInExPack_Timberborn-5.4.19",
+    "Timberborn_Central-TimberAPI-0.5.0"
+  ]
+}

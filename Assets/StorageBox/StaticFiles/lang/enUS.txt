@@ -1,0 +1,6 @@
+ID,Text,Comment
+Knatte.StorageBox.DisplayName,Storagebox,-
+Knatte.StorageBox.Description,This is a smaller Storagebox,-
+Knatte.StorageBox.FlavorDescription,"""Do it."" —Some beaver",-
+
+
