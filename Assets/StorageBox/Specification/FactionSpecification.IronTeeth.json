@@ -1,8 +1,5 @@
 {
   "CommonBuildings": [
-	"knatte.frogstatue/knatte_frogstatue/FrogStatue.IronTeeth"
-  ],
-  "Needs": [
-    "FrogStatue"
+	"knatte.storagebox/knatte_storagebox/Storagebox"
   ]
 }
