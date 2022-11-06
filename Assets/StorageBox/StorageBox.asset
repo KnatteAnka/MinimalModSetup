@@ -15,9 +15,9 @@ MonoBehaviour:
   StagingPaths:
   - <ManifestPluginStaging>
   Author: KnatteAnka
-  Name: FrogStatue
-  Description: FrogStatue
-  Version: 1.0.7
+  Name: StorageBox
+  Description: StorageBox
+  Version: 1.0.1
   Dependencies: []
 --- !u!114 &-1800585617083543040
 MonoBehaviour:
@@ -73,7 +73,7 @@ MonoBehaviour:
   - <ManifestPluginStaging>/assets
   - <ThunderstorePackage>/<ManifestName>/plugins/assets
   assetBundles:
-  - assetBundleName: Knatte_Storagebox
+  - assetBundleName: knatte_storagebox
     assets:
     - {fileID: 1892513168112050, guid: 307ae2eb8a43ac44ca62cf3e3cd10b1c, type: 3}
 --- !u!114 &7276679206402820566
