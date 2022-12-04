@@ -9,8 +9,10 @@
     "precompiledReferences": [
         "BepInEx.dll",
         "Bindito.Core.dll",
-        "TimberAPI.dll",
-        "0Harmony.dll"
+        "0Harmony.dll",
+        "TimberApi.dll",
+        "TimberApi.Core.dll",
+        "TimberApi.Common.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
