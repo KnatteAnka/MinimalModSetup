@@ -12,16 +12,13 @@ GameObject:
   - component: {fileID: 114326846091936570}
   - component: {fileID: 4440177359970826680}
   - component: {fileID: 114531841495513050}
-  - component: {fileID: 1150205694243259655}
-  - component: {fileID: 6490083506597725530}
   - component: {fileID: 8301357133823993450}
-  - component: {fileID: 114610737280114322}
+  - component: {fileID: 2541090614915671357}
   - component: {fileID: 114510377815161048}
   - component: {fileID: -4465535361010207686}
   - component: {fileID: 114156708270337902}
-  - component: {fileID: 2653935389734436324}
   - component: {fileID: 114348988219595795}
-  - component: {fileID: 114959368033260412}
+  - component: {fileID: -2492222796473404570}
   m_Layer: 0
   m_Name: StorageBox
   m_TagString: Untagged
@@ -95,33 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: -1604455801, guid: fb0076526bca5246b24d6c818d68ce00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1150205694243259655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892513168112050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 706676795, guid: 0e822cc0fc83f501e1c55e94dd1f0b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxCapacity: 120
-  _whitelistedGoodType: Box
---- !u!114 &6490083506597725530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892513168112050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -630110892, guid: 1ae21b0c7c908882e31fedf7e1f7f92c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inventoryComponentName: Stockpile
 --- !u!114 &8301357133823993450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +107,7 @@ MonoBehaviour:
   _limitedCapacity: 0
   _capacity: 0
   _throttledExit: 1
---- !u!114 &114610737280114322
+--- !u!114 &2541090614915671357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892513168112050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -788214902, guid: b6b9d4cc3090b6fceb2eb6438dd271f1, type: 3}
+  m_Script: {fileID: -731835049, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabName: StorageBox
@@ -206,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _noAutoWalls: 0
   _generateFloorsOnStackable: 1
+  _blockAllEdges: 0
   _addedEdges: []
 --- !u!114 &114156708270337902
 MonoBehaviour:
@@ -221,27 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localAccess: {x: 1.5, y: 0.1, z: 0.2}
   _forceOneFinalAccess: 0
---- !u!114 &2653935389734436324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892513168112050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 200649111, guid: 6db671ca2a10521151a0623ea7cc13c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _connectableBlocks:
-  - _coordinates: {x: 0, y: 0, z: 0}
-    _connectableDirections: 51
-  - _coordinates: {x: 0, y: 1, z: 0}
-    _connectableDirections: 54
-  - _coordinates: {x: 1, y: 0, z: 0}
-    _connectableDirections: 57
-  - _coordinates: {x: 1, y: 1, z: 0}
-    _connectableDirections: 60
 --- !u!114 &114348988219595795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +211,7 @@ MonoBehaviour:
     _hasCustomPivot: 0
     _coordinates: {x: 0, y: 0, z: 0}
   _devModeTool: 0
---- !u!114 &114959368033260412
+--- !u!114 &-2492222796473404570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892513168112050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -296257353, guid: b6b9d4cc3090b6fceb2eb6438dd271f1, type: 3}
+  m_Script: {fileID: -1115175677, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _displayNameLocKey: Knatte.StorageBox.DisplayName
@@ -432,7 +382,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2094201588503313027}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9108877393767171781
 MeshFilter:
@@ -489,7 +439,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 4178631902243170}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1a32b6caa9311fb4f86eba76f28b025f, type: 3}
@@ -541,7 +490,6 @@ PrefabInstance:
       value: Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a32b6caa9311fb4f86eba76f28b025f, type: 3}
 --- !u!4 &1168802753341579301 stripped
 Transform:

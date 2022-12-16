@@ -116,7 +116,7 @@ MonoBehaviour:
   ListType: 0
   Manifests: []
   Recursive: 1
-  SourceRequired: 0
+  SourceRequired: 1
   EstablishDestination: 1
   Source: <ManifestStagingRoot>/plugins/<ManifestName>
   Destination: <BepInEx_Plugins>
