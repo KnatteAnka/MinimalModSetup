@@ -20,7 +20,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.16.1"
       },
-      "hash": "b24f1a9beec188c25d02fe31607ef7a4f1a96430"
+      "hash": "bfeae20bb7a93332e845ae5c647c6320ebd0fe97"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",

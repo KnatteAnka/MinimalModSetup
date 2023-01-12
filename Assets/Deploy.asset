@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5717776575090739479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8808e815b3ce9c94e9552cb1dee9e305, type: 3}
+  m_Name: Zip
+  m_EditorClassIdentifier: 
+  Active: 1
+  PerManifest: 1
+  ListType: 0
+  Manifests: []
+  ArchiveType: 1
+  Source: <ManifestPluginStaging>/..
+  Output: <ManifestStagingRoot>/../<ManifestName>_<ManifestVersion>.zip
 --- !u!114 &-5465487307450690123
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12,15 +31,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03063c7a6ec04cc4c82c75cf9bcc8db8, type: 3}
   m_Name: Copy
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
   PerManifest: 1
   ListType: 0
   Manifests: []
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
-  Source: <ManifestStagingRoot>/patchers/<ManifestName>
+  Source: <ManifestStagingRoot>
   Destination: <BepInEx_Patchers>
+--- !u!114 &-4964412909370122906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f65d4371163fb4695da79ab8df0e84, type: 3}
+  m_Name: ExecuteProcess
+  m_EditorClassIdentifier: 
+  Active: 1
+  workingDirectory: <DeleteZipPath>
+  executable: DeleteZipAndMeta.bat
+  arguments:
+  - <PWD>/<StagingRoot>
+  - 1
 --- !u!114 &-1363876913999848018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +92,8 @@ MonoBehaviour:
   - {fileID: 7527256621150178074}
   - {fileID: 2078919326612615040}
   - {fileID: 114803605343111210}
+  - {fileID: -4964412909370122906}
+  - {fileID: -5717776575090739479}
   QuickAccess: 0
   manifest: {fileID: 11400000, guid: 664afe1b83bf27a44bf805bf1a2fa1b9, type: 2}
 --- !u!114 &114803605343111210
@@ -69,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03063c7a6ec04cc4c82c75cf9bcc8db8, type: 3}
   m_Name: Copy
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
   PerManifest: 0
   ListType: 0
   Manifests: []
@@ -116,9 +155,9 @@ MonoBehaviour:
   ListType: 0
   Manifests: []
   Recursive: 1
-  SourceRequired: 1
+  SourceRequired: 0
   EstablishDestination: 1
-  Source: <ManifestStagingRoot>/plugins/<ManifestName>
+  Source: <ManifestStagingRoot>
   Destination: <BepInEx_Plugins>
 --- !u!114 &2935167292843794703
 MonoBehaviour:
@@ -153,12 +192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03063c7a6ec04cc4c82c75cf9bcc8db8, type: 3}
   m_Name: Copy
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
   PerManifest: 1
   ListType: 0
   Manifests: []
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
-  Source: <ManifestStagingRoot>/monomod/<ManifestName>
+  Source: <ManifestStagingRoot>
   Destination: <BepInEx_Monomod>
