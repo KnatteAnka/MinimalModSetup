@@ -35,6 +35,7 @@ MonoBehaviour:
   PerManifest: 1
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
@@ -52,7 +53,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f65d4371163fb4695da79ab8df0e84, type: 3}
   m_Name: ExecuteProcess
   m_EditorClassIdentifier: 
-  Active: 1
+  Active: 0
+  PerManifest: 0
+  ListType: 0
+  Manifests: []
   workingDirectory: <DeleteZipPath>
   executable: DeleteZipAndMeta.bat
   arguments:
@@ -112,6 +116,7 @@ MonoBehaviour:
   PerManifest: 0
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 0
   SourceRequired: 0
   EstablishDestination: 1
@@ -133,6 +138,7 @@ MonoBehaviour:
   PerManifest: 0
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 0
   SourceRequired: 1
   EstablishDestination: 0
@@ -154,6 +160,7 @@ MonoBehaviour:
   PerManifest: 1
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
@@ -175,6 +182,7 @@ MonoBehaviour:
   PerManifest: 0
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 1
   SourceRequired: 1
   EstablishDestination: 1
@@ -196,6 +204,7 @@ MonoBehaviour:
   PerManifest: 1
   ListType: 0
   Manifests: []
+  StrictDictionaryReplace: 1
   Recursive: 1
   SourceRequired: 0
   EstablishDestination: 1
