@@ -72,7 +72,7 @@ MonoBehaviour:
   assetBundles:
   - assetBundleName: knatte_storagebox
     assets:
-    - {fileID: 1892513168112050, guid: 307ae2eb8a43ac44ca62cf3e3cd10b1c, type: 3}
+    - {fileID: 102900000, guid: 100b05c8a603aa543a4fd6dd2466170f, type: 3}
 --- !u!114 &7788702448107751720
 MonoBehaviour:
   m_ObjectHideFlags: 0
