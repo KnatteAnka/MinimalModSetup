@@ -49,12 +49,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
   - {fileID: -3931462110823901632}
-  - {fileID: -1800585617083543040}
+  - {fileID: 2115163651095110300}
   - {fileID: 9120418034178625098}
   - {fileID: 2590189338767857166}
   - {fileID: 7788702448107751720}
+  - {fileID: -1800585617083543040}
   identity: {fileID: -3931462110823901632}
   QuickAccess: 1
+--- !u!114 &2115163651095110300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f750c613c28a14d8d01f3d86ce4481, type: 3}
+  m_Name: ModIoData
+  m_EditorClassIdentifier: 
+  StagingPaths: []
+  ModId: 3321872
+  Version: 1.0.2
+  SetLive: 0
+  Description: 
 --- !u!114 &2590189338767857166
 MonoBehaviour:
   m_ObjectHideFlags: 0
