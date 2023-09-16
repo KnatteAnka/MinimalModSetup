@@ -4,6 +4,8 @@
 
 
 using System;
+using System.Security.Permissions;
+
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
@@ -19,6 +21,7 @@ using System.Text;
 using HarmonyLib;
 using UnityEngine;
 
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 
 namespace Staircase
 {
