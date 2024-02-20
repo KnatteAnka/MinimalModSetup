@@ -14,8 +14,6 @@ namespace EditorPlugins
     private static PlaceableBlockObject _placeableBlockObject;
     private static bool _placeableBlockObjectExists;
 
-    // GUI section
-    // Add these instance fields to your Editor/EditorWindow
     private object _sceneOverlayWindow;
     private MethodInfo _showSceneViewOverlay;
 
@@ -24,7 +22,7 @@ namespace EditorPlugins
     private static bool _baseZFoldout;
     private static bool _occupationFoldout;
     private static bool _customPivotFoldout;
-    // Drawing section
+    
     private static bool _showSize;
     private static Color _sizeColour = new Color(0.5254902f, 0.909804f, 0.9607844f, 1f);
     private static float _sizeFillMultiplier = 0f;
@@ -55,17 +53,13 @@ namespace EditorPlugins
       _sceneOverlayWindow = Activator.CreateInstance(
         overlayWindowType, 
         EditorGUIUtility.TrTextContent("Block Object Visualiser","Block Object Visualiser", (Texture)null),
-        // Draw function of the window
         windowFunc,
-        // Priority of the window
         int.MaxValue,
-        // Unity Obect that will be passed to the drawing function
         (UnityEngine.Object) target,
-        //SceneViewOverlay.WindowDisplayOption.OneWindowPerTarget
         Enum.Parse(windowDisplayOptionType, "OneWindowPerTarget")
       );
       _showSceneViewOverlay = sceneViewOverlayType.GetMethod("ShowWindow", BindingFlags.Static | BindingFlags.Public);
-
+      
       _blockObject = (BlockObject)target;
       _placeableBlockObject = _blockObject.TransformFast.gameObject.GetComponent<PlaceableBlockObject>();
       _placeableBlockObjectExists = _placeableBlockObject != null;
@@ -129,17 +123,14 @@ namespace EditorPlugins
     public void OnSceneGUI()
     {
       _showSceneViewOverlay.Invoke(null, new object[] {_sceneOverlayWindow});
-      
       if (!_pluginEnabled)
         return;
-      
+        
       _blockObject = (BlockObject)target;
-
       var baseZ = _blockObject.BaseZ;
       var specification = _blockObject.BlocksSpecification;
       var size = specification.Size;
       var blockSpecifications = specification.BlockSpecifications;
-      // var customPivot = 
 
       if (_showSize)
         DrawSize(size, baseZ);
@@ -149,14 +140,12 @@ namespace EditorPlugins
         DrawOccupation(blockSpecifications, size, baseZ);
       if (_showCustomPivot && _placeableBlockObjectExists)
         DrawCustomPivot();
-      
     }
 
     void DrawCustomPivot()
     {
       if (!_placeableBlockObject.CustomPivot._hasCustomPivot)
         return;
-
       var pivotLocation = TimberbornToUnityVector(_placeableBlockObject.CustomPivot.Coordinates);
       DrawAxis(pivotLocation, 1f);
     }
@@ -167,8 +156,6 @@ namespace EditorPlugins
       Handles.DrawLine(new Vector3(pos.x - scale, pos.y, pos.z), new Vector3(pos.x + scale, pos.y, pos.z));
       Handles.DrawLine(new Vector3(pos.x, pos.y - scale, pos.z), new Vector3(pos.x, pos.y + scale, pos.z));
       Handles.DrawLine(new Vector3(pos.x, pos.y, pos.z - scale), new Vector3(pos.x, pos.y, pos.z + scale));
-      // Handles.color = GetTransparent(_customPivotColour, 0.5f);
-      // Handles.DrawWireSphere(pos, scale/2);
     }
     
     void DrawBaseZ(Vector3 size)
@@ -177,9 +164,6 @@ namespace EditorPlugins
       var sizeVector = new Vector3(size.x+0.4f, 0f, size.y+0.4f);
       Handles.color = _baseZColour;
       Handles.DrawWireCube(vector, sizeVector);
-      
-      // _solidColorMaterial.SetColor("_Color", GetTransparent(_baseZColour, _baseZFillMultiplier));
-      // Gizmos.DrawCube(vector, sizeVector);
     }
 
     void DrawSize(Vector3 size, float baseZ)
@@ -188,8 +172,6 @@ namespace EditorPlugins
       var center = CorrectFromBaseZ(vector / 2, baseZ);
       Handles.color = GetTransparent(_sizeColour, _sizeFillMultiplier);;
       Handles.DrawWireCube(center, vector);
-      // Handles.color = GetTransparent(_sizeColour, _sizeFillMultiplier);
-      // Handles.DrawCube(center, vector);
     }
 
     void DrawOccupation(BlockSpecification[] blockSpecifications, Vector3Int size, float baseZ)
@@ -250,8 +232,6 @@ namespace EditorPlugins
     {
       Handles.color = GetTransparent(_occupationColour, _occupationFillMultiplier);
       Handles.DrawWireCube(TimberbornToUnityVector(center), size);
-      // Handles.color = GetTransparent(_occupationColour, _occupationFillMultiplier);
-      // Handles.DrawCube(TimberbornToUnityVector(center), size);
     }
     void DrawFull(Vector3 position)
     {
@@ -287,7 +267,6 @@ namespace EditorPlugins
     }
     void DrawTopAndCorners(Vector3 position)
     {
-      //@TODO: Redo this one, looks a bit bad
       DrawTop(position);
       DrawCorners(position);
     }
@@ -305,7 +284,6 @@ namespace EditorPlugins
     }
     void DrawFullExceptCorners(Vector3 position)
     {
-      //@TODO: Redo this one, looks a bit bad
       var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.5f, 0.5f));
       var size = new Vector3(0.8f, 1f, 0.8f);
       DrawOccupationMesh(unityVector, size);
