@@ -144,10 +144,18 @@ namespace EditorPlugins
 
     void DrawCustomPivot()
     {
-      if (!_placeableBlockObject.CustomPivot._hasCustomPivot)
-        return;
-      var pivotLocation = TimberbornToUnityVector(_placeableBlockObject.CustomPivot.Coordinates);
-      DrawAxis(pivotLocation, 1f);
+      try
+      {
+        if (!_placeableBlockObject.CustomPivot._hasCustomPivot)
+          return;
+
+        var pivotLocation = TimberbornToUnityVector(_placeableBlockObject.CustomPivot.Coordinates);
+        DrawAxis(pivotLocation, 1f);
+      }
+      catch
+      {
+        Debug.LogWarning("Unable to display Custom Pivot. This is likely because the game scripts have not been publicised.");
+      }
     }
 
     void DrawAxis(Vector3 pos, float scale)
