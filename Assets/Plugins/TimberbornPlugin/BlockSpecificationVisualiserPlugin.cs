@@ -291,8 +291,8 @@ namespace EditorPlugins
     }
     void DrawFullExceptTop(Vector3 position)
     {
-      var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.5f, 0.25f));
-      var size = new Vector3(0.8f, 0.5f, 1f);
+      var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.25f, 0.5f));
+      var size = new Vector3(0.8f, 0.5f, 0.8f);
       DrawOccupationMesh(unityVector, size);
     }
 
