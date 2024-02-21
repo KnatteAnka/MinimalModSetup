@@ -243,19 +243,19 @@ namespace EditorPlugins
     void DrawTop(Vector3 position)
     {
       var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.75f, 0.5f));
-      var size = new Vector3(1f, 0.5f, 1f);
+      var size = new Vector3(0.8f, 0.5f, 0.8f);
       DrawOccupationMesh(unityVector, size);
     }
     void DrawBottom(Vector3 position)
     {
       var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.3f, 0.5f));
-      var size = new Vector3(1f, 0.4f, 1f);
+      var size = new Vector3(0.8f, 0.4f, 0.8f);
       DrawOccupationMesh(unityVector, size);
     }
     void DrawFloor(Vector3 position)
     {
       var unityVector = TimberbornToUnityVector(position + new Vector3(0.5f, 0.05f, 0.5f));
-      var size = new Vector3(1f, 0.1f, 1f);
+      var size = new Vector3(0.8f, 0.1f, 0.8f);
       DrawOccupationMesh(unityVector, size);
     }
     void DrawCorners(Vector3 position)
