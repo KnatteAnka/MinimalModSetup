@@ -9,7 +9,8 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "Timberborn.BlockSystem.dll"
+        "Timberborn.BlockSystem.dll",
+        "Timberborn.BaseComponentSystem.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
