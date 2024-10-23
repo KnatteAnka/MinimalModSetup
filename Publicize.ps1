@@ -13,8 +13,11 @@ $timberbornDlls | ForEach-Object {
 
 # Publicize the dlls
 
-Write-Host "assembly-publicizer --overwrite --publicize-compiler-generated $($timberbornDlls | ForEach-Object { ".\Packages\Timberborn\$($_.Name)" } )"
-assembly-publicizer --overwrite --publicize-compiler-generated $($timberbornDlls | ForEach-Object { "$($timberbornDir)\$($_.Name)" } )
+#Write-Host "assembly-publicizer --overwrite --publicize-compiler-generated $($timberbornDlls | ForEach-Object { $timberbornDir."\".$($_.Name) } )"
+#assembly-publicizer --overwrite --publicize-compiler-generated $($timberbornDlls | ForEach-Object { "$($timberbornDir)\$($_.Name)" } )
+$timberbornDlls | ForEach-Object{
+    assembly-publicizer --overwrite --publicize-compiler-generated $timberbornDir"\"$_
+}
 
 # Restore the original dlls
 
